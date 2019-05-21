@@ -28,7 +28,7 @@ body {
 /* The header including hero image etc. */
 .header {
     height: 95vh;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)), url(../img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(255, 255, 255, 0)), url(../img/hero.jpg);
     background-size: cover;
     /* Centers the image when the browser window is resized */
     background-position: center;
@@ -68,6 +68,15 @@ body {
     font-size: 60px;
     font-weight: 700;
     /* letter-spacing: 35px; */
+    opacity: 0;
+
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* Use animation fill to set the finished state of the element and set original opacity to 0 */
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 3; */
+    animation-delay: 1s;
 }
 
 .heading-primary-sub {
@@ -76,5 +85,48 @@ body {
     font-weight: 500;
     letter-spacing: 10px;
     text-transform: uppercase;
+    opacity: 0;
     
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+
+/* ANIMATIONS SETTINGS */
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    80% {
+        /* Creates bounce effect */
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    80% {
+        /* Creates bounce effect */
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        animation-fill-mode: forwards
+    }
 }
