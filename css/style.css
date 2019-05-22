@@ -20,15 +20,20 @@ UNIVERSAL RESET
     box-sizing: border-box;
 }
 
+/* root font-size set to 10pm to allow for easy rem calculations */
+html {
+    font-size: 10px;
+}
+
 /* Text styling to be inherited by all elements in the body */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
     /* Creates a whitespace frame around the entire page */
-    padding: 30px;
+    padding: 3rem;
 }
 
 /* 
@@ -43,7 +48,7 @@ HEADER AND HERO BOX
     background-size: cover;
     /* Centers the image when the browser window is resized */
     background-position: center;
-    border-radius: 20px 20px 0 0;
+    border-radius: 2rem 2rem 0 0;
 
     /* slices the corner off of the image */
     /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
@@ -51,12 +56,12 @@ HEADER AND HERO BOX
 
 .logo-box {
     position: absolute;
-    top: 60px;
-    left: 60px;
+    top: 6rem;
+    left: 6rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 
@@ -80,9 +85,9 @@ HEADER AND HERO BOX
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
 
     opacity: 0;
 
@@ -97,11 +102,11 @@ HEADER AND HERO BOX
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
-    letter-spacing: 10px;
+    letter-spacing: 1rem;
     text-transform: uppercase;
-    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    text-shadow: 0 2rem 4rem rgba(0, 0, 0, .5);
 
     opacity: 0;
     
@@ -127,7 +132,7 @@ ANIMATIONS SETTINGS
 
     80% {
         /* Creates bounce effect */
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     100% {
@@ -139,12 +144,12 @@ ANIMATIONS SETTINGS
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
 
     80% {
         /* Creates bounce effect */
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     100% {
@@ -157,12 +162,12 @@ ANIMATIONS SETTINGS
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
         /* Creates bounce effect */
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -174,12 +179,12 @@ ANIMATIONS SETTINGS
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
         /* Creates bounce effect */
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -214,10 +219,10 @@ BUTTONS
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    margin: 60px 20px;
+    padding: 1.5rem 4rem;
+    margin: 6rem 2rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     /* transition: all .2s; */
 
     opacity: 0;
@@ -234,11 +239,11 @@ BUTTONS
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 }
 
