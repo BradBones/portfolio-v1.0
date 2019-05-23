@@ -19,6 +19,7 @@ UNIVERSAL RESET
 *::before {
     margin: 0;
     padding: 0;
+    /* box-sizing set to be inherited from the parent of these elements */
     box-sizing: inherit;
 }
 
@@ -41,7 +42,7 @@ body {
     color: #777;
     /* Creates a whitespace frame around the entire page */
     padding: 3rem;
-
+    /* box-sizing inherited by smaller elements with in the body unless overwritten (best practice) */
     box-sizing: border-box;
 }
 
@@ -63,18 +64,18 @@ HEADER AND HERO BOX
     /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 6rem;
     left: 6rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
 
-.hero-text-box {
+.header__hero-box {
     position: absolute;
     text-align: center;
     top: 40%;
@@ -92,7 +93,7 @@ HEADER AND HERO BOX
     backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 700;
@@ -109,7 +110,7 @@ HEADER AND HERO BOX
     animation-delay: 1s;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 500;
@@ -219,7 +220,7 @@ BUTTONS
 ************
 */
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
