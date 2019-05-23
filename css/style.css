@@ -14,15 +14,22 @@ UNIVERSAL RESET
 ************
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
-/* root font-size set to 10pm to allow for easy rem calculations */
+ /* 
+Setting the root font-size to 62.5% (10 divided by the standard default browser font-size of 16px).
+This effectivly sets the root font size to 10px for easy rem calculation while allowing the user to
+adjust their screen font size in case of visual impairment.
+*/
 html {
-    font-size: 10px;
+    /* Equivalent to 10px for rem calculation purposes */
+    font-size: 62.5%;
 }
 
 /* Text styling to be inherited by all elements in the body */
@@ -34,6 +41,8 @@ body {
     color: #777;
     /* Creates a whitespace frame around the entire page */
     padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 /* 
