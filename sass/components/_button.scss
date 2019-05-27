@@ -1,0 +1,44 @@
+/* 
+************
+BUTTONS
+************
+*/
+
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        margin: 6rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+        /* transition: all .2s; */
+
+        opacity: 0;
+        
+        animation-name: fadeInButton;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+        /* backface-visibility helps to smooth the animation */
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    }
+
+    &--white {
+        background-color: #fff;
+        color: $light-grey;
+    }
+}

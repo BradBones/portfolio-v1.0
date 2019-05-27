@@ -1,0 +1,29 @@
+/* 
+************
+UNIVERSAL RESET
+************
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* box-sizing set to be inherited from the parent of these elements */
+    box-sizing: inherit;
+}
+
+ /* 
+Setting the root font-size to 62.5% (10 divided by the standard default browser font-size of 16px).
+This effectivly sets the root font size to 10px for easy rem calculation while allowing the user to
+adjust their screen font size in case of visual impairment.
+*/
+html {
+    /* Equivalent to 10px for rem calculation purposes */
+    font-size: 62.5%;
+}
+
+/* Text styling to be inherited by all elements in the body */
+body {
+    box-sizing: border-box;
+}
