@@ -2,7 +2,6 @@
 
 .row {
     max-width: $grid-width; //1140px
-    background-color: #eee;
     margin: 0 auto; // to center block elements
     margin-bottom: $gutter-vertical;
 
@@ -17,7 +16,6 @@
         // * would select classes that contain "col-"
         // $ would select classes that ends in "col-"
     [class^="col-"] {
-        background-color: orangered;
         float: left;
 
         // Seclects everything execpt the last child

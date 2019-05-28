@@ -3,11 +3,12 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: $light-grey;
+    color: $light-grey-2;
     /* Creates a whitespace frame around the entire page */
     padding: 3rem;
 }
 
+// HERO STATEMENT
 .heading-primary {
     color: #fff;
     text-align: center;
@@ -48,4 +49,26 @@ body {
         animation-fill-mode: forwards;
         animation-delay: 1s;
     }
+}
+
+// Skew animation, gradiant heading
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+
+    // Creating text color gradient **Choose new color varibles**
+    background-image: linear-gradient(to right, lightgrey, darkgrey);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
+    transition: all .2s;
+
+    // Skew effect on hover
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2)
+    }
+
 }
