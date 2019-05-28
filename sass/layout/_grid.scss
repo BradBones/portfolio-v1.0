@@ -1,0 +1,60 @@
+// Clean and simple 4 column grid layout with clearfix mixin
+
+.row {
+    max-width: $grid-width; //1140px
+    background-color: #eee;
+    margin: 0 auto; // to center block elements
+    margin-bottom: $gutter-vertical;
+
+    // Seclects everything execpt the last child
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    // ^ Selects all class names which begin with "col-"
+        // * would select classes that contain "col-"
+        // $ would select classes that ends in "col-"
+    [class^="col-"] {
+        background-color: orangered;
+        float: left;
+
+        // Seclects everything execpt the last child
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        // max-width - gutter / 2
+        // use #{} syntax to place $variable within a calc() function
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+    .col-1-of-3 {
+        // max-width - 2 x gutter / 3
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    .col-2-of-3 {
+        // 2 x the calculation of column 1-of-3 + the gutter width
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    .col-1-of-4 {
+        // max-width - 3 x gutter / 4
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        // 2 x the calculation of column 1-of-4 + the gutter width
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-4 {
+        // 3 x the calculation of column 1-of-4 + 2x the gutter width
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+
+}
