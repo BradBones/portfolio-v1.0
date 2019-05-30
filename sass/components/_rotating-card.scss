@@ -1,0 +1,48 @@
+.rotating-card {
+    // perspective for the card-flip effect has to be placed on the parent
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative; // Allows for position absolute to be set below
+    height: 50rem;
+    
+
+    &__side {
+    color: white;
+    font-size: 5rem;
+    height: 50rem; // Height specified to preven partent collapse with position absolute
+    border-radius: 5px;
+    transition: all 0.8s ease;
+    width: 100%; // Prevents width colapse when position set to relative
+    backface-visibility: hidden; // hides the reverse face when flipping
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+
+    // Allows front and back to overlay back-to-back
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--front {
+        background-color: $white;
+    }
+
+    &--back {
+        transform: rotateY(180deg);
+
+        &-1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+    }
+    }
+
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+
+    }
+}

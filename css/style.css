@@ -199,6 +199,35 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.rotating-card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .rotating-card__side {
+    color: white;
+    font-size: 5rem;
+    height: 50rem;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .rotating-card__side--front {
+      background-color: #fff; }
+    .rotating-card__side--back {
+      transform: rotateY(180deg); }
+      .rotating-card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .rotating-card:hover .rotating-card__side--front {
+    transform: rotateY(180deg); }
+  .rotating-card:hover .rotating-card__side--back {
+    transform: rotateY(0); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -258,3 +287,8 @@ HEADER AND HERO BOX
 .section-about {
   background-color: #f7f7f7;
   padding: 30rem 0; }
+
+.section-portfolio {
+  background-color: #777;
+  padding: 22rem 0 10rem 0;
+  margin-top: -12rem; }
