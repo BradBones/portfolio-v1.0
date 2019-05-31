@@ -224,7 +224,7 @@ body {
       .rotating-card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .rotating-card:hover .rotating-card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .rotating-card:hover .rotating-card__side--back {
     transform: rotateY(0); }
 
