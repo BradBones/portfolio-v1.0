@@ -39,37 +39,37 @@ ANIMATIONS SETTINGS
     }
 }
 
-@keyframes moveInLeft {
+@keyframes moveIntop {
     0% {
         opacity: 0;
-        transform: translateX(-10rem);
+        transform: translateY(-10rem);
     }
 
     80% {
         /* Creates bounce effect */
-        transform: translateX(1rem);
+        transform: translateY(1rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
-@keyframes moveInRight {
+@keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateX(10rem);
+        transform: translateY(10rem);
     }
 
     80% {
         /* Creates bounce effect */
-        transform: translateX(-1rem);
+        transform: translateY(-1rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 

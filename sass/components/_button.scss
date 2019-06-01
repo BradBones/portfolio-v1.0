@@ -1,70 +1,100 @@
-
-// ************
+// *************
 // HERO BUTTONS
-// ************
+// *************
+
 .btn {
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
-        margin: 6rem 2rem;
+        margin: 1rem;
         display: inline-block;
         border-radius: 10rem;
-        /* transition: all .2s; */
+        transition: all .2s;
+        /* used to hide the btn::after effect below */
+        position: relative;
+        font-size: $default-font-size;
+    }
 
-        opacity: 0;
-        
-        animation-name: fadeInButton;
-        animation-duration: 3s;
-        animation-timing-function: ease-in;
-        animation-fill-mode: forwards;
-        animation-delay: 2s;
-
-        /* backface-visibility helps to smooth the animation */
-        backface-visibility: hidden;
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
     }
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+        box-shadow: 0 1rem 2rem rgba($color-black, .5);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
     }
 
     &:active {
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+        box-shadow: $shadow-small;
     }
 
     &--white {
-        background-color: #fff;
-        color: $light-grey-2;
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+    
+    &--animated {
+        animation: moveInButton .5s ease-out .75s;
+        animation-fill-mode: backwards;
     }
 }
 
-// ************
+// *************
 // SECONDARY BUTTONS
-// ************
+// *************
 .btn-text {
     &:link,
     &:visited {
-        color: $light-grey-2;
+        color: $color-primary;
         display: inline-block;
         font-size: $default-font-size;
         text-decoration: none;
-        border-bottom: 1px solid $light-grey-2;
+        border-bottom: 1px solid $color-primary;
         padding: 3px;
         transition: all 0.2s;
     }
 
     &:hover {
-        background-color: $light-grey-2;
-        color: $white;
-        box-shadow: 0 1rem 2rem rgba($black, 0.15);
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: $shadow-medium;
         transform: translateY(-2px);
     }
 
     &:active {
-        box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+        box-shadow: $shadow-small;
         transform: translateY(0);
     }
 }
+
+
