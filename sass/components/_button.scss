@@ -54,12 +54,14 @@
         }
     }
 
-    &--green {
-        background-color: $color-primary;
-        color: $color-white;
-
-        &::after {
-            background-color: $color-primary;
+    &--clear {
+        background-color: transparent;
+        color: $color-grey-dark;
+        box-shadow: $shadow-small;
+    
+        &:active {
+            box-shadow: none;
+            border: 0.5px solid rgba(220, 220, 220, 0.3);
         }
     }
     
