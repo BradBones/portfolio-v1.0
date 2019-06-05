@@ -59,7 +59,7 @@
         <main>
 
             <!-- PORTFOLIO SECTION -->
-            <section class="section-portfolio">
+            <section class="section-portfolio" id="portfolio-anchor">
                 
                 <!-- SECTION HEADER -->
                 <div class="u-center-text u-margin-bottom-large">
@@ -301,7 +301,7 @@
 
 
             <!-- ABOUT SECTION -->
-            <section class="section-about">
+            <section class="section-about" id="about-anchor">
                 <div class="u-center-text u-margin-bottom-8">
                     <h2 class="heading-secondary">
                         Bio
@@ -335,7 +335,7 @@
 
 
             <!-- CONTACT SECTION -->
-            <section class="section-contact">
+            <section class="section-contact" id="contact-anchor">
                 <div class="row">
                     <div class="contact">
                         <div class="contact__form">
@@ -365,6 +365,8 @@
                                         Submit &rarr;
                                     </button>
                                 </div>
+
+                                <a href="#popup-anchor" class="btn btn--white">Book now!</a>
 
                             </form>
                         </div>
@@ -403,7 +405,24 @@
             </div>
         </footer>
         
-
+        <!-- POPUP CONTENT OVERLAY -->
+        <div class="popup" id="popup-anchor">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#contact-anchor" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id. Libero id faucibus nisl tincidunt eget nullam non nisi est. Faucibus vitae aliquet nec ullamcorper sit amet. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Et leo duis ut diam quam nulla. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id. Libero id faucibus nisl tincidunt eget nullam non nisi est. Faucibus vitae aliquet nec ullamcorper sit amet. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Et leo duis ut diam quam nulla. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum.
+                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
 
 
 
