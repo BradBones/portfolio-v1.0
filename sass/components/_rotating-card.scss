@@ -72,16 +72,33 @@
         border-top-right-radius: 5px;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+            background-image: url(../img/word_guess.png);
+            background-position: center;
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+            background-image: url(../img/sw_game.png);
+            background-position: right;
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
-    
+            background-image: url(../img/alien.png);
+            background-position: right;
+        }
+
+        &--4 {
+            background-image: url(../img/cs-1.jpg);
+            background-position: center;
+        }
+
+        &--5 {
+            background-image: url(../img/cs-2.jpg);
+            background-position: center;
+        }
+
+        &--6 {
+            background-image: url(../img/cs-3.jpg);
+            background-position: center;
         }
     }
 

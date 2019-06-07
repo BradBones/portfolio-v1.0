@@ -9,7 +9,7 @@ HEADER AND HERO BOX
     background-image: linear-gradient(rgba($black, 0.8), rgba($white, 0.2)), url(../img/hero.jpg);
     background-size: cover;
     /* Centers the image when the browser window is resized */
-    background-position: center;
+    background-position: center bottom;
     border-radius: 2rem 2rem 0 0;
 
     /* slices the corner off of the image */
