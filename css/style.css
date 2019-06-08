@@ -146,6 +146,27 @@ body {
 .u-margin-top-large {
   margin-top: 10rem; }
 
+.logo {
+  padding: .6rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  overflow: hidden; }
+  .logo__logo-text {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: #fff; }
+    .logo__logo-text--line-1 {
+      position: relative;
+      left: 0px; }
+    .logo__logo-text--line-2 {
+      position: relative;
+      left: 2px; }
+    .logo__logo-text--line-3 {
+      position: relative;
+      left: 8px; }
+
 .btn:link, .btn:visited {
   background-color: transparent;
   text-transform: uppercase;
@@ -511,11 +532,7 @@ HEADER AND HERO BOX
   .header__logo-box {
     position: absolute;
     top: 6rem;
-    left: 6rem;
-    padding: .6rem;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    overflow: hidden; }
+    left: 6rem; }
   .header__logo {
     font-size: 3.5rem;
     font-weight: 900;
@@ -531,17 +548,18 @@ HEADER AND HERO BOX
     transform: translate(-50%, -50%); }
 
 .footer {
+  position: relative;
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7;
   border-radius: 0 0 2rem 2rem; }
   .footer__logo-box {
-    text-align: center;
-    margin-bottom: 8rem; }
-  .footer__logo {
-    width: 15rem;
-    height: auto; }
+    position: absolute;
+    display: inline-block;
+    margin-bottom: 8rem;
+    right: 3rem;
+    bottom: -5rem; }
   .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
