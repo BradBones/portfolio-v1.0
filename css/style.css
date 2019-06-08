@@ -99,7 +99,7 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 6rem;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 1rem;
     animation-name: moveIntop;
     animation-duration: 1.2s;
@@ -116,16 +116,10 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 300;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all .2s; }
-  .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  color: #dddfe6;
+  border-bottom: 1px solid #bb0a1e; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -153,28 +147,17 @@ body {
   margin-top: 10rem; }
 
 .btn:link, .btn:visited {
+  background-color: transparent;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1rem 2rem;
   margin: 1rem;
   display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
+  border-radius: 5px;
+  transition: all .5s;
   /* used to hide the btn::after effect below */
   position: relative;
   font-size: 1.6rem; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -188,41 +171,14 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
+  color: #fff; }
 
-.btn--clear {
-  background-color: transparent;
-  color: #777;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
-  .btn--clear:active {
-    box-shadow: none;
-    border: 0.5px solid rgba(220, 220, 220, 0.3); }
+.btn--grey {
+  color: #777; }
 
 .btn--animated {
   animation: moveInButton .5s ease-out .75s;
   animation-fill-mode: backwards; }
-
-.btn-text:link, .btn-text:visited {
-  color: #55c57a;
-  display: inline-block;
-  font-size: 1.6rem;
-  text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  transition: all 0.2s; }
-
-.btn-text:hover {
-  background-color: #55c57a;
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px); }
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0); }
 
 .rotating-card {
   perspective: 150rem;
@@ -447,7 +403,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(#bb0a1e, #5c040e);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -490,7 +446,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #55c57a;
+  color: #5c040e;
   transform: translateX(-1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -506,7 +462,7 @@ body {
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
-    background-color: #333;
+    background-color: #bb0a1e;
     display: inline-block; }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
@@ -529,11 +485,13 @@ body {
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
   top: 0;
-  transform: rotate(135deg); }
+  transform: rotate(135deg);
+  background-color: #5c040e; }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
-  transform: rotate(-135deg); }
+  transform: rotate(-135deg);
+  background-color: #5c040e; }
 
 /* 
 ************
@@ -553,9 +511,17 @@ HEADER AND HERO BOX
   .header__logo-box {
     position: absolute;
     top: 6rem;
-    left: 6rem; }
+    left: 6rem;
+    padding: .6rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden; }
   .header__logo {
-    height: 3.5rem; }
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: #fff; }
   .header__hero-box {
     position: absolute;
     text-align: center;
@@ -609,5 +575,4 @@ HEADER AND HERO BOX
 
 .section-portfolio {
   background-color: #f7f7f7;
-  padding: 22rem 0 10rem 0;
-  margin-top: -12rem; }
+  padding: 10rem 0 3rem 0; }

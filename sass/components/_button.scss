@@ -5,29 +5,17 @@
 .btn {
     &:link,
     &:visited {
+        background-color: transparent;
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: 1rem 2rem;
         margin: 1rem;
         display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
+        border-radius: 5px;
+        transition: all .5s;
         /* used to hide the btn::after effect below */
         position: relative;
         font-size: $default-font-size;
-    }
-
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
     }
 
     &:hover {
@@ -46,23 +34,15 @@
     }
 
     &--white {
-        background-color: $color-white;
-        color: $color-grey-dark;
+        color: $color-white;
 
         &::after {
-            background-color: $color-white;
+            
         }
     }
 
-    &--clear {
-        background-color: transparent;
+    &--grey {
         color: $color-grey-dark;
-        box-shadow: $shadow-small;
-    
-        &:active {
-            box-shadow: none;
-            border: 0.5px solid rgba(220, 220, 220, 0.3);
-        }
     }
     
     &--animated {
@@ -71,32 +51,6 @@
     }
 }
 
-// *************
-// SECONDARY BUTTONS
-// *************
-.btn-text {
-    &:link,
-    &:visited {
-        color: $color-primary;
-        display: inline-block;
-        font-size: $default-font-size;
-        text-decoration: none;
-        border-bottom: 1px solid $color-primary;
-        padding: 3px;
-        transition: all 0.2s;
-    }
 
-    &:hover {
-        background-color: $color-primary;
-        color: $color-white;
-        box-shadow: $shadow-medium;
-        transform: translateY(-2px);
-    }
-
-    &:active {
-        box-shadow: $shadow-small;
-        transform: translateY(0);
-    }
-}
 
 

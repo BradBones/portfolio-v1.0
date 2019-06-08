@@ -19,10 +19,18 @@ HEADER AND HERO BOX
         position: absolute;
         top: 6rem;
         left: 6rem;
+        padding: .6rem;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        overflow: hidden;
     }
     
     &__logo {
-        height: 3.5rem;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: $color-white;
     }
     
     
