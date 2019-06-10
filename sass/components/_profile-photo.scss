@@ -1,0 +1,61 @@
+.story {
+    width: 100%;
+    margin: 0 auto;
+    //box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    //background-color: rgba($color-white, 0.6);
+    border-radius: 5px;
+    padding: 6rem;
+    padding-left: 9rem; // Padding icreased to alow for shape transform below
+    font-size: $default-font-size;
+
+   
+    
+
+    // Creating a round shape for the text to float around
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%); // creates a round photo holder, must be floated and have width and height to work
+
+        // reveals the circle by clipping the edges to the circle shape
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        // creates a margin
+        transform: translateX(-3rem); //moves into padding so padding above has to be increased by the same amount 
+        position: relative;
+    }
+
+    &__img {
+        height: 100%; // of the parent
+        transform: translateX(0) scale(1);
+        backface-visibility: hidden;
+        transition: all 0.5s;
+    }
+
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        color:$color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: scale(1.1);
+        filter: blur(3px) brightness(80%);
+    }
+}
