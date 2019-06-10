@@ -21,6 +21,11 @@
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .5);
+        
+        // Creating text color gradient
+        background-image: linear-gradient(to right, $color-light-red, $color-dark-red);
+        -webkit-background-clip: text;
+        color: transparent;
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);

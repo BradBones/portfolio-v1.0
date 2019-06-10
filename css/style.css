@@ -182,7 +182,10 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #bb0a1e, #5c040e);
+  -webkit-background-clip: text;
+  color: transparent; }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -372,7 +375,7 @@ body {
     display: inline-block;
     transition: all 0.2s; }
   .popup__close:hover {
-    color: #55c57a; }
+    color: #bb0a1e; }
 
 .row {
   max-width: 114rem;
@@ -424,7 +427,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#bb0a1e, #5c040e);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -453,7 +456,7 @@ body {
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 400;
   padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
@@ -467,7 +470,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #5c040e;
+  color: #bb0a1e;
   transform: translateX(-1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -547,6 +550,10 @@ HEADER AND HERO BOX
     /* transform translate allows us to center the object to it's own center */
     transform: translate(-50%, -50%); }
 
+.intro-statement-text {
+  text-align: center;
+  font-size: 2rem; }
+
 .footer {
   position: relative;
   background-color: #333;
@@ -590,6 +597,10 @@ HEADER AND HERO BOX
 .section-about {
   background-color: #fff;
   padding: 10rem 0; }
+
+.section-intro-statement {
+  background-color: #f7f7f7;
+  padding: 10rem 0 3rem 0; }
 
 .section-portfolio {
   background-color: #f7f7f7;
