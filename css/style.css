@@ -308,6 +308,21 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(to right, #bb0a1e, #5c040e);
+    -webkit-background-clip: text;
+    color: transparent; }
+
 .popup {
   width: 100vw;
   height: 100vh;
@@ -594,14 +609,23 @@ HEADER AND HERO BOX
     width: 80%;
     float: right; }
 
-.section-about {
-  background-color: #fff;
-  padding: 10rem 0; }
-
 .section-intro-statement {
   background-color: #f7f7f7;
   padding: 10rem 0 3rem 0; }
 
 .section-portfolio {
   background-color: #f7f7f7;
-  padding: 10rem 0 3rem 0; }
+  padding: 10rem 0 15rem 0; }
+
+.section-skills {
+  padding: 12rem 0 4rem 0;
+  background-image: linear-gradient(to right bottom, rgba(187, 10, 30, 0.8), rgba(92, 4, 14, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -12rem; }
+  .section-skills > * {
+    transform: skewY(7deg); }
+
+.section-about {
+  background-color: #fff;
+  padding: 10rem 0; }

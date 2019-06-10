@@ -1,3 +1,28 @@
+.section-intro-statement {
+    background-color: #f7f7f7;;
+    padding: 10rem 0 3rem 0;
+}
+
+.section-portfolio {
+    background-color: #f7f7f7;;
+    padding: 10rem 0 15rem 0;
+}
+
+.section-skills {
+    padding: 12rem 0 4rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-light-red, 0.8), rgba($color-dark-red, 0.8)), url(../img/nat-4.jpg);
+    background-size: cover;
+
+    // Skew the section to create the "sash" design
+    transform: skewY(-7deg);
+    margin-top: -12rem;
+
+    // Direct child selector (all children) to skew back straight and leave background skewed
+    & > * {
+        transform: skewY(7deg);
+    }
+}
+
 .section-about {
     background-color: $color-white;
     padding: 10rem 0;
@@ -6,13 +31,3 @@
     // margin-top: -20vh;
 }
 
-.section-intro-statement {
-    background-color: #f7f7f7;;
-    padding: 10rem 0 3rem 0;
-}
-
-.section-portfolio {
-    background-color: #f7f7f7;;
-    padding: 10rem 0 3rem 0;
-    //margin-top: -12rem;
-}
