@@ -152,6 +152,9 @@ body {
 .u-margin-top-small {
   margin-top: 1.5rem; }
 
+.u-margin-left {
+  margin-left: 4rem; }
+
 .logo {
   padding: .6rem;
   border: 1px solid transparent;
@@ -223,6 +226,13 @@ input[type=submit] {
   /* used to hide the btn::after effect below */
   position: relative;
   font-size: 1.6rem; }
+
+.social-icons {
+  position: absolute;
+  bottom: 6rem; }
+  .social-icons__indi {
+    height: 5rem;
+    border-radius: 5px; }
 
 .form__group {
   width: 75%;
