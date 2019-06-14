@@ -56,6 +56,21 @@
     }
 }
 
-
+// FIX THIS - NOT DRY
+// It should only be nessasary to have one button class, but the submit button won't currnetly inherit.
+input[type=submit] {
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 5px;
+    border: transparent;
+    transition: all .5s;
+    /* used to hide the btn::after effect below */
+    position: relative;
+    font-size: $default-font-size;
+}
 
 

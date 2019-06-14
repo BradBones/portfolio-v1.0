@@ -146,6 +146,12 @@ body {
 .u-margin-top-large {
   margin-top: 10rem; }
 
+.u-margin-top-medium {
+  margin-top: 5rem; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
 .logo {
   padding: .6rem;
   border: 1px solid transparent;
@@ -204,6 +210,24 @@ body {
   animation: moveInButton .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+input[type=submit] {
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  display: inline-block;
+  border-radius: 5px;
+  border: transparent;
+  transition: all .5s;
+  /* used to hide the btn::after effect below */
+  position: relative;
+  font-size: 1.6rem; }
+
+.form__group {
+  width: 75%;
+  margin: 0 auto; }
+
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
 
@@ -216,7 +240,7 @@ body {
   background-color: rgba(238, 238, 238, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all 0.3s; }
   .form__input:focus {
@@ -241,44 +265,9 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
-.form__radio-group {
-  width: 49%;
-  display: inline-block; }
-
-.form__radio-input {
-  display: none; }
-
-.form__radio-label {
-  font-size: 1.6rem;
-  cursor: pointer;
-  padding-left: 4.5rem;
-  position: relative; }
-
-.form__radio-button {
-  height: 3rem;
-  width: 3rem;
-  border: 5px solid #55c57a;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -0.4; }
-  .form__radio-button::after {
-    content: "";
-    display: block;
-    height: 1.3rem;
-    width: 1.3rem;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #55c57a;
-    opacity: 0;
-    transition: opacity 0.2s; }
-
-.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
-  opacity: 1; }
+textarea {
+  resize: vertical;
+  /* user can resize vertically, but width is fixed */ }
 
 .rotating-card {
   perspective: 150rem;
