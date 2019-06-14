@@ -1,11 +1,6 @@
-.section-intro-statement {
-    background-color: #f7f7f7;;
-    padding: 10rem 0 3rem 0;
-}
-
 .section-portfolio {
-    background-color: #f7f7f7;;
-    padding: 10rem 0 15rem 0;
+    background-color: #f7f7f7;
+    padding: 10rem 0 10rem 0;
 }
 
 .section-skills {
@@ -23,11 +18,17 @@
     }
 }
 
-.section-about {
-    background-color: $color-white;
-    padding: 10rem 0;
+.section-about-1 {
+    background-color: #f7f7f7;
+    padding: 10rem 0 1rem 0;
 
     // filling the whitespace below the cut out wedge by subtracting 75% from 95% - the difference between the long side and short side percentages of vh
     // margin-top: -20vh;
+}
+
+.section-about-2 {
+    background-color: #f7f7f7;
+    padding: 20rem 0;
+    margin-top: -10rem;
 }
 

@@ -1,12 +1,12 @@
 .story {
-    width: 100%;
+    width: 75%;
     margin: 0 auto;
-    //box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-    //background-color: rgba($color-white, 0.6);
-    border-radius: 5px;
-    padding: 6rem;
-    padding-left: 9rem; // Padding icreased to alow for shape transform below
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.4);
+    border-radius: 10px;
+    padding: 6rem 6rem 0 6rem;
     font-size: $default-font-size;
+    position: relative;
 
    
     
@@ -15,7 +15,8 @@
     &__shape {
         width: 15rem;
         height: 15rem;
-        float: left;
+        margin: 0 auto;
+    
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%); // creates a round photo holder, must be floated and have width and height to work
 
@@ -23,8 +24,9 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         // creates a margin
-        transform: translateX(-3rem); //moves into padding so padding above has to be increased by the same amount 
+        transform: translateX(-2rem); //moves into padding so padding above has to be increased by the same amount 
         position: relative;
+        top: 5rem;
     }
 
     &__img {
@@ -58,4 +60,9 @@
         transform: scale(1.1);
         filter: blur(3px) brightness(80%);
     }
+
+    &__text {
+        margin-bottom: 0;
+    }
 }
+

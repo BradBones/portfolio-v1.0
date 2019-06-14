@@ -55,29 +55,43 @@
                     <span class="heading-primary--sub">UI Designer & <br>Software Developer</span>
                 </h1>
 
-                <a href="#portfolio-anchor" class="btn btn--grey ">Portfolio &rarr;</a>
-                <a href="#popup-anchor" class="btn btn--grey ">say hello! &rarr;</a>
+                <a href="#portfolio-anchor" class="btn btn--grey">Portfolio &rarr;</a>
+                <a href="#contact-anchor" class="btn btn--grey">say hello! &rarr;</a>
             </div>
         </header>
 
         <main>
 
             <!-- PERSONAL INTRO -->
-            <section class="section-intro-statement intro-statement-text" id="intro-anchor">
-                <p>
-                    Personal intro mission statement goes here - I love codiong and creating cool stuff and here's why...
-                </p>
+            <section class="section-about-1" id="intro-anchor">
+                <div class="row">
+                    <div class="story">
+                        <div class="story__text u-center-text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">Why I love to code</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                            </p>
+                        </div>
+
+                        <figure class="story__shape">
+                            <img src="img/profile1small.jpg" alt="person on a tour" class="story__img">
+                            <figcaption class="story__caption">
+                                Contact Me
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>  
             </section>
 
             <!-- PORTFOLIO SECTION -->
             <section class="section-portfolio" id="portfolio-anchor">
                 
-                <!-- SECTION HEADER -->
+                <!-- SECTION HEADER
                 <div class="u-center-text u-margin-bottom-large">
                     <h2 class="heading-secondary">
                         Portfolio
                     </h2>
-                </div>
+                </div> -->
 
                 <!-- FIRST ROW -->
                 <div class="row">
@@ -375,35 +389,14 @@
                 </section>
 
             <!-- ABOUT SECTION -->
-            <section class="section-about" id="about-anchor">
+            <section class="section-about-2" id="about-anchor">
                 <div class="u-center-text u-margin-bottom-large">
                     <h2 class="heading-secondary">
-                        Bio
+                        HIGHLIGHTS
                     </h2>
                 </div>
 
-                <div class="row">
-                        <div class="story">
-                            <figure class="story__shape">
-                                <img src="img/profile1small.jpg" alt="person on a tour" class="story__img">
-                                <figcaption class="story__caption">
-                                    Neil Young
-                                </figcaption>
-                            </figure>
-                            <div class="story__text">
-                                <h3 class="heading-tertiary u-margin-bottom-small">Why I love to code</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                </p>
-                                <br>
-                                <br>
-                                <h3 class="heading-tertiary u-margin-bottom-small">My background</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .
-                                </p>
-                            </div>
-                        </div>
-                    </div>  
+                
             </section>
 
 
@@ -442,63 +435,70 @@
             </div>
         </footer>
         
+        
+        <!-- CONTACT SECTION -->
         <!-- POPUP CONTENT OVERLAY -->
-
-    
-
-        <div class="popup" id="popup-anchor">
+        <div class="popup section-contact" id="contact-anchor">
             <div class="popup__content">
-                <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-                </div>
-                <div class="popup__right">
-                    <a href="#contact-anchor" class="popup__close">&times;</a>
-                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                    <!-- CONTACT SECTION -->
-    <section class="section-contact" id="contact-anchor">
-            <div class="row">
-                <div class="contact">
-                    <div class="contact__form">
-                        <form action="#" class="form">
-                            <!-- HEADING -->
-                            <div class="u-margin-bottom-medium">
-                                <h2 class="heading-secondary">
-                                    Contact
-                                </h2>
-                            </div>
+                <div class="row">
+                    <div class="contact">
+                        <div class="contact__form">
+                            <form action="#" class="form">
+                                <!-- HEADING -->
+                                <div class="u-margin-bottom-medium">
+                                    <h2 class="heading-secondary">
+                                        Contact me
+                                    </h2>
+                                </div>
+        
+                                <!-- NAME FIELD -->
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="full name" id="name" required>
+                                    <label for="name" class="form__label">Full Name</label>
+                                </div>
+        
+                                <!-- EMAIL FIELD -->
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="email address" id="email" required>
+                                    <label for="email" class="form__label">Email Address</label>
+                                </div>
 
-                            <!-- NAME FIELD -->
-                            <div class="form__group">
-                                <input type="text" class="form__input" placeholder="full name" id="name" required>
-                                <label for="name" class="form__label">Full Name</label>
-                            </div>
+                                <!-- MESSAGE FIELD -->
+                                <div class="form__group">
+                                    <textarea rows="8" cols="50"  placeholder="Your message..." class="form__input" id="message" required></textarea>
+                                    <label for="message" class="form__label">Message</label>
+                                </div>
 
-                            <!-- EMAIL FIELD -->
-                            <div class="form__group">
-                                <input type="email" class="form__input" placeholder="email address" id="email" required>
-                                <label for="email" class="form__label">Email Address</label>
-                            </div>
-
-                            <!-- SUBMIT BUTTON -->
-                            <div class="form__group">
-                                <button class="btn btn--clear">
-                                    Submit &rarr;
-                                </button>
-                            </div>
-
-                            <a href="#popup-anchor" class="btn btn--white">Book now!</a>
-
-                        </form>
+                                <!-- SUBMIT BUTTON  - NEEDS FIXING!! -->
+                                <div class="form__group">
+                                    <input type="submit" class="btn btn--grey" value="Submit &rarr;">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                </div> 
+                
+                <!-- CLOSE BUTTON -->
+                <div class="close-btn">
+                    <a href="#popup-anchor" class="popup__close">&times;</a>
+                </div> 
             </div>
-        </section>
-                    <a href="#" class="btn btn--green">Book now</a>
-                </div>
-            </div>
+                   
         </div>
+
+
+
+
+                    
+    
+       
+            
+
+                        
+
+             
+    
+                
 
 
 
