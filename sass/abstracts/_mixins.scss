@@ -30,6 +30,14 @@ $breakpoint argument choices:
  - tab-land
  - big-desk
 
+ 
+ ORDER OF APPLICATION FOR MEDIA QUERIES:
+ - Base + Typography
+ - General layout + grid
+ - Page layout
+ - Components
+
+
  1em = 16px (em's best for media queries) Allows user to change browser default font size for accessability without breaking the layout
 */
 @mixin respond($breakpoint) {
