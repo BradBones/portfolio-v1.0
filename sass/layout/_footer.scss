@@ -1,14 +1,11 @@
 .footer {
     position: relative;
     background-color: $color-grey-dark-3;
-    padding: 10rem 0;
+    padding: 5rem 0 25rem 0;
     font-size: 1.4rem;
     color: $color-grey-light-1;
     border-radius: 0 0 2rem 2rem;
 
-    @include respond(tab-port) {
-        padding: 8rem 0;
-    }
 
     &__logo-box {
         position: absolute;
@@ -23,10 +20,6 @@
         padding-top: 2rem;
         display: inline-block; // prevents the line from stretching past the last item
 
-        @include respond(tab-port) {
-            width: 100%;
-            text-align: center;
-        }
     }
 
     &__list {
@@ -65,10 +58,5 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
-
-        @include respond(tab-port) {
-            width: 100%;
-            float: none;    
-        }
     }
 }

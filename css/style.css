@@ -78,7 +78,8 @@ html {
 
 /* Text styling to be inherited by all elements in the body */
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
 
 /* Text styling to be inherited by all elements in the body */
 body {
@@ -87,8 +88,7 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  /* Creates a whitespace frame around the entire page */
-  padding: 3rem; }
+  /* Creates a whitespace frame around the entire page */ }
 
 .heading-primary {
   color: #fff;
@@ -142,12 +142,6 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
-
-.u-margin-top-large {
-  margin-top: 10rem; }
-
-.u-margin-top-medium {
-  margin-top: 5rem; }
 
 .u-margin-top-small {
   margin-top: 1.5rem; }
@@ -515,8 +509,7 @@ textarea {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  margin-bottom: 8rem; }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
@@ -689,7 +682,7 @@ HEADER AND HERO BOX
 .footer {
   position: relative;
   background-color: #333;
-  padding: 10rem 0;
+  padding: 5rem 0 25rem 0;
   font-size: 1.4rem;
   color: #f7f7f7;
   border-radius: 0 0 2rem 2rem; }
@@ -728,14 +721,14 @@ HEADER AND HERO BOX
 
 .section-portfolio {
   background-color: #f7f7f7;
-  padding: 10rem 0 10rem 0; }
+  padding: 15rem 0 20rem 0; }
 
 .section-skills {
-  padding: 12rem 0 4rem 0;
+  padding: 12rem 0 12rem 0;
   background-image: linear-gradient(to right bottom, rgba(187, 10, 30, 0.8), rgba(92, 4, 14, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -12rem; }
+  margin-top: -10rem; }
   .section-skills > * {
     transform: skewY(7deg); }
 
