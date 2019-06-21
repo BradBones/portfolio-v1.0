@@ -16,6 +16,7 @@
         overflow: hidden; // allows the rounded corners to show regardless of content overlay
         transition: all 0.8s ease;
         width: 100%; // Prevents width colapse when position set to relative
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden; // hides the reverse face when flipping
         box-shadow: $shadow-large;
 
@@ -187,7 +188,7 @@
     /////////////////////
 
 
-    @include respond(tab-port) {
+    @include respond(phone) {
         height: auto;
         border-radius: 5px;
         background-color: $color-white;
